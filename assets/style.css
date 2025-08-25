@@ -55,3 +55,9 @@ no se ven bien los nombres*/
 .dropdown-content.select-dropdown li > span {
   color: #7886ca !important;
 }
+
+/* Cambiamos color de botones cuando son presionados */
+.month-prev:active, .month-next:active {
+    background-color: #7886ca;
+
+}
