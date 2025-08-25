@@ -1,0 +1,57 @@
+h1 {
+    color: #7886ca;
+}
+
+.m-logo {
+    margin-left: 15px;
+    /* Margen del logo (no me pescó) */
+}
+
+/* label underline focus color form */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid #7886ca !important;
+    /* rojo */
+    box-shadow: 0 1px 0 0 #7886ca !important;
+}
+
+/* label focus color form*/
+input[type="text"]:focus+label,
+input[type="email"]:focus+label,
+input[type="password"]:focus+label {
+    color: #7886ca !important;
+    font-weight: bold !important;
+}
+
+/* Día seleccionado */
+.datepicker-date-display {
+  background-color: #7886ca !important;
+  color: #f5f5fa !important;
+}
+
+/* Color de los botones */
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+  color: #7886ca !important;
+  font-weight: bolder;
+}
+
+/* Fecha del calendario , lo movemos un poco por que en español
+no se ven bien los nombres*/
+
+.datepicker-controls .select-dropdown.dropdown-trigger {
+  width: 50px !important;
+  min-width: 100px !important;
+}
+
+/* Cambiando colores de los valores del dropdown del datepicker*/
+.datepicker-controls .dropdown-content li > a,
+.datepicker-controls .dropdown-content li > span {
+  color: #7886ca !important;
+  font-weight: bold;
+}
+
+/* Cambia el color de los valores de año en el dropdown del datepicker */
+.dropdown-content.select-dropdown li > span {
+  color: #7886ca !important;
+}
