@@ -2,9 +2,27 @@ h1 {
     color: #7886ca;
 }
 
+/* Formateo titulo página paquinas pequeñas */
+@media only screen and (max-width: 600px) {
+ h1{
+  font-size: 3.7rem !important;
+  text-align: center;
+ }
+}
+
+/* Margen del logo para pantallas grandes (no me pescó) */
 .m-logo {
     margin-left: 15px;
-    /* Margen del logo (no me pescó) */
+    
+}
+
+/* Formateo logo empresa en pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .brand-logo {
+    font-size: 1.7rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
 }
 
 /* label underline focus color form */
@@ -12,7 +30,6 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
     border-bottom: 1px solid #7886ca !important;
-    /* rojo */
     box-shadow: 0 1px 0 0 #7886ca !important;
 }
 
