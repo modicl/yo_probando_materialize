@@ -78,3 +78,23 @@ no se ven bien los nombres*/
     background-color: #7886ca;
 
 }
+
+/* Cambia el color de fondo del footer */
+.page-footer {
+  background-color: #7886ca !important;
+}
+
+.toast {
+  background-color: #7886ca !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.parsley-errors-list {
+  color: #e53935;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}

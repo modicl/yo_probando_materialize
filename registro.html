@@ -29,41 +29,57 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel z-depth-3" style="border-radius: 20px; padding: 32px;">
-                    <form>
+                    <form data-parsley-validate>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input placeholder="Nombre" id="first_name" type="text" class="validate">
+                                <input placeholder="Nombre" id="first_name" type="text" class="validate" required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Debes ingresar tu nombre.">
                                 <label for="first_name">Nombre</label>
                             </div>
                             <div class="input-field col s6">
-                                <input placeholder="Apellido" id="last_name" type="text" class="validate">
+                                <input placeholder="Apellido" id="last_name" type="text" class="validate" required
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Debes ingresar tu apellido.">
                                 <label for="last_name">Apellido Paterno</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="address" type="text" class="validate">
+                                <input id="address" type="text" class="validate" required data-parsley-required="true"
+                                    data-parsley-required-message="Debes ingresar tu dirección.">
                                 <label for="address">Dirección</label>
                             </div>
                             <div class="input-field col s12">
-                                <input type="text" class="datepicker" id="birthdate">
+                                <input type="text" class="datepicker" id="birthdate" required
+                                    data-parsley-required="true" data-parsley-birthdate data-parsley-birthdate
+                                    data-parsley-required-message="Debes ingresar tu fecha de nacimiento.">
                                 <label for="birthdate">Fecha de nacimiento</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" required data-parsley-type="email"
+                                    data-parsley-type-message="Debes ingresar un correo válido."
+                                    data-parsley-required-message="Debes ingresar tu correo electrónico."
+                                    data-parsley-trigger="keyup">
                                 <label for="email">Correo electronico</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="password" type="password" class="validate">
+                                <input id="password" type="password" class="validate" required data-parsley-specialchar
+                                    data-parsley-specialchar-message="La contraseña debe tener al menos un carácter especial."
+                                    data-parsley-minlength="6"
+                                    data-parsley-minlength-message="La contraseña debe tener al menos 6 caracteres."
+                                    data-parsley-required-message="Debes ingresar una contraseña."
+                                    data-parsley-trigger="keyup">
                                 <label for="password">Contraseña</label>
                             </div>
-                            <div class="col s6 center-align offset-m1">
-                                <button class="btn waves-effect indigo lighten-2" type="submit">Registrar
-                                </button>
+                            <div class="container mt-3">
+                                <div class="col s6 center-align offset-m1">
+                                    <button class="btn waves-effect indigo lighten-2" type="button"
+                                        onclick="registrar()">Registrar</button>
+                                </div>
+                                <div class="col s6 l4 center-align offset-m1">
+                                    <button class="btn waves-effect red lighten-2" type="button"
+                                        onclick="limpiar()">Limpiar</button>
+                                </div>
                             </div>
-
-                            <div class="col s6 l4 center-align offset-m1">
-                                <button class="btn waves-effect red lighten-2" type="submit">Limpiar</button>
-                            </div>
-
                         </div>
                     </form>
                 </div>
@@ -72,8 +88,36 @@
     </div>
 </body>
 
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Contenido del Footer</h5>
+                <p class="grey-text text-lighten-4">Algun texto iría aca.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Inicio</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Registro</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contacto</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Sucursales</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+        </div>
+    </div>
+</footer>
+
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
 <script src="assets/index.js"></script>
+
 
 </html>
